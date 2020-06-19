@@ -1,0 +1,274 @@
+
+@media screen and (max-width:766px){
+    main section#site-hero .jumbotron {
+        height: 70vh; padding-top: 112px;
+    }
+    nav[role=navigation].navbar.main-nav {
+        .container {
+            padding: 0;
+            flex-wrap: nowrap;
+        }
+        .logo {
+            img {
+                max-width: 180px;
+            }
+        }
+        #main.open {
+            .nav {
+                left: 20%;
+                z-index: 99;
+                &__list {
+                    &__item {
+                        &:nth-child(6) {
+                            a {
+                                span {
+                                    transform: rotate(00deg);
+                                }
+                            }
+                        }
+                    }    
+                }
+            }
+            #backdrop {
+                position: fixed;
+                top: 0; right: 0; bottom: 0; left: 0;
+                background-color: rgba(34,34,34,.6);
+                transition: .4s background-color ease-in;
+            }
+        }
+        #main {
+            .nav {
+                position: fixed;
+                height: 100vh;
+                background-color: $white-lighter;
+                flex-direction: column;
+                right: 0;
+                top: 0;
+                left: 100%;
+                transition: .4s all ease;
+                box-shadow:
+                -14.4px 0 27.4px rgba(0, 0, 0, 0.029),
+                -18px 0 40.1px rgba(34,34, 34, 0.037),
+                -40px 0 80px rgba(0, 0, 0, 0.07)
+                ;
+                padding-top: 40px;
+                &__list {
+                    &__item {
+                        &:nth-child(5) {
+                            flex-grow: 1;
+                        }
+                        &:nth-child(6) {
+                            background-color: #cccccc;
+                            a {
+                                padding: 2rem;
+                                border-top: 1px solid #f6f6f6;
+                                color: #222;
+                                display: flex;
+                                align-items: center;
+                                height: 30vh;
+                                span {
+                                    transform: rotate(-180deg);
+                                    display: inline-block;
+                                    transition: .6s all ease-in-out;
+                        
+                                }
+                            }
+                        }
+                    }    
+                }
+            }
+        }
+    }
+
+    main {
+        section#site-hero {
+            .jumbotron {
+                &__wrap {
+                    h1 {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+        section#site-why {
+            .left-section {
+                &__title {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+        section#site-testimonials {
+            .header-text {
+                h1 {
+                    font-size: 2.5rem;
+                }
+            }
+            .carousel-wrap {
+             margin-top: 20px;
+             .carousel {
+                 .carousel-indicators {
+                    top: inherit;
+                 }
+             }
+            }
+        }
+        section#site-contact {
+            .right-section {
+                &__title {
+                    font-size: 2.5rem;
+                }
+                .btn-wrap .btn { width: 100%; }
+            }
+        }
+    }
+    footer .footer-body .lift { margin-top: -105px !important; }
+    footer .footer-body #logo-bottom img { max-width: 200px !important; }
+    //end of main
+    .gallery__img .image { height: 100px; }
+    #photos {
+        -moz-column-count:    1;
+        -webkit-column-count: 1;
+        column-count:         1;
+    }
+	.desktop-only { display: none; }
+}
+
+@media screen and (min-width:767px){
+    #photos {
+        /* Prevent vertical gaps */
+        line-height: 0;
+        -webkit-column-count: 3;
+        -webkit-column-gap:   0px;
+        -moz-column-count:    3;
+        -moz-column-gap:      0px;
+        column-count:         3;
+        column-gap:           0px;  
+    }
+    
+    main section#site-hero .jumbotron {
+        height: 90vh;
+    }
+    nav[role=navigation].navbar.main-nav {
+        .logo {
+            img {
+                max-width: 280px;
+            }
+        }
+        #menu {
+            display: none;
+            
+        }
+        #main {
+            .nav {
+                #close-arrow { display: none; }
+            }
+        }
+    }
+    main {
+        section#site-hero {
+            .jumbotron {
+                &__wrap {
+                    h1 {
+                        font-size: 4rem;
+                    }
+                }
+            }
+        }
+        section#site-why {
+            
+            .left-section {
+                width: 50%;
+                &__title {
+                    font-size: 3.6rem;
+                }
+            }
+        }
+        section#site-testimonials {
+            .header-text {
+                h1 {
+                    font-size: 3.6rem;
+                }
+            }
+            .carousel-wrap {
+             margin-top: 100px;
+             .carousel {
+                 .carousel-indicators {
+                    top: 120%;
+                 }
+             }
+            }
+        }
+        section#site-contact {
+            .right-section {
+                padding-left: 26px;
+                margin-left: 40%;
+                &__title {
+                    font-size: 3.6rem;
+                }
+            }
+        }
+    }
+    //end of main
+    .gallery__img .image { height: 300px; }
+    .mobile-only { display: none; }
+    
+}
+
+@media only screen and (max-width: 991px) and (min-width: 767px)  {
+    nav[role=navigation].navbar.main-nav {
+        .container-fluid { flex-wrap: nowrap; padding: 0; }
+        .logo { text-align: center; }
+        #main { 
+            width: 100%; 
+            ul.nav { justify-content: center; }
+        }
+    }
+}
+
+@media screen and (max-width:991px){
+    nav[role=navigation].navbar.top-nav {
+        .nav {
+            justify-content: center;
+            width: 100%;
+        }
+    }
+	main {
+        section#site-hero {
+            .jumbotron {
+                &__wrap {
+                    .btn-group {
+                        flex-direction: column;
+                        &__btn {
+                            margin: .6rem 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+        section#site-why {
+            .btn-group {
+                flex-direction: column;
+                &__btn {
+                    margin: .6rem 0 !important;
+                }
+            }
+        }
+    }
+	section#site-intro {
+        .card-wrap {
+            margin: 10px 0;
+            border-bottom: 6px solid #ddd;
+        }
+    }
+}
+
+@media screen and (min-width:992px){
+    section#site-intro {
+        .card-wrap {
+            &__header {
+                margin-top: -40px;
+            }
+        }
+    }
+	
+}
