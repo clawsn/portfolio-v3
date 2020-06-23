@@ -173,14 +173,23 @@ section#portfolio{
    position: relative;
    margin: 0px 20px 20px 20px;
    .portfolio {
-       display: flex;
-       justify-content: space-between;
-       &:nth-child(1) {
-           background-color: $primary-brand;
-       }
-       &__item {
+        display: flex;
+        justify-content: space-between;
+        li:nth-child(1) {
+            background-image: url('../oi.jpg');
+        }
+        li:nth-child(2) {
+            background-color: $primary-brand;
+        }
+        li:nth-child(3) {
+            background-color: $primary-brand;
+        }
+        &__item {
            width: 100%;
-           min-height: 320px;
+           height: 380px;
+           background-size: cover;
+           background-position: 50% 50%;
+           transition: .2s all ease-in-out;
            &__link {
                text-decoration: none;
                display: block;
@@ -191,16 +200,23 @@ section#portfolio{
                align-items: center;
                justify-content: center;
                text-align: center;
-               .company-logo {
-                   svg {
-                    width: 100%;
-                    max-width: 140px;
-                   }
-               }
-               .company-text {
-                margin-top: 16px;
-                line-height: 2;
-               }
+               min-height: 320px;
+               box-shadow: 0px 0px 0px rgba(34,34,34,.4);
+               transition: .2s all ease-in-out;
+               .overlay {
+                   opacity: 0;
+                   transition: .2s all ease-in-out;
+                    .company-logo {
+                        svg {
+                            width: 100%;
+                            max-width: 140px;
+                        }
+                    }
+                    .company-text {
+                        margin-top: 16px;
+                        line-height: 2;
+                    }
+                }
            }
        }
    }

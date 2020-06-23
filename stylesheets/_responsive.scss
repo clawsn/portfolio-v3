@@ -50,6 +50,19 @@
             }
         }
     }
+    section#portfolio{
+        .portfolio {
+            flex-direction: column;
+            &__item {
+                &__link {
+                    background-color: rgba(91, 55, 183, .8);
+                    .overlay {
+                        opacity: 1 !important;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width:992px){
@@ -76,4 +89,22 @@
             }
         }
     }
+    section#portfolio{
+        .portfolio {
+             &__item {
+                &:hover {
+                 height: 420px;
+                 a {
+                     background-color: rgba(91, 55, 183, .8);
+                     box-shadow: 20px 20px 30px rgba(34,34,34,.4);
+                     position: relative;
+                     z-index: 9;
+                     .overlay {
+                         opacity: 1;
+                     }
+                 }
+             }
+            }
+        }
+     }
 }
