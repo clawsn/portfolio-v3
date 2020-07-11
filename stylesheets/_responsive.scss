@@ -50,14 +50,36 @@
             }
         }
     }
-    section#portfolio{
+    section#portfolio {
+        margin: 0px 20px 20px 20px;
         .portfolio {
             flex-direction: column;
+            li:nth-child(3) {
+                a {
+                    .overlay {
+                        position: absolute;
+                        background-color: rgba(91,55,183,.8);
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        z-index: 99;
+                    }
+                }
+            }
             &__item {
                 &__link {
                     background-color: rgba(91, 55, 183, .8);
                     .overlay {
                         opacity: 1 !important;
+                        .company-text {
+                            p {
+                                span {
+                                    opacity: 1;
+                                    right: 20px;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -90,17 +112,67 @@
         }
     }
     section#portfolio{
+        margin: 0px 20px 120px 20px;
         .portfolio {
-             &__item {
+            height: 380px;
+            li:nth-child(1) {
+                &:hover a {
+                    box-shadow: 20px 20px 30px rgba(34,34,34,.4);
+                }
+            }
+            li:nth-child(2) {
+                &:hover a {
+                    box-shadow: 0px 20px 30px rgba(34,34,34,.4);
+                }
+            }
+            li:nth-child(3) {
+                &:hover a {
+                    box-shadow: -20px 20px 30px rgba(34,34,34,.4);
+                    .overlay {
+                        position: absolute;
+                        background-color: rgba(91,55,183,.8);
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        z-index: 99;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+            &__item {
+                &__link {
+                    .overlay {
+                         .company-text {
+                             p {
+                                 position: relative;
+                                 span {
+                                    right: 100px;
+                                opacity: 0;
+                                 }
+                             }
+                         }
+                     }
+                }
                 &:hover {
-                 height: 420px;
+                 height: 480px;
+
                  a {
                      background-color: rgba(91, 55, 183, .8);
-                     box-shadow: 20px 20px 30px rgba(34,34,34,.4);
                      position: relative;
                      z-index: 9;
                      .overlay {
                          opacity: 1;
+                         .company-text {
+                            p {
+                                span {
+                                   right: 20px;
+                                   opacity: 1;
+                                }
+                            }
+                        }
                      }
                  }
              }
