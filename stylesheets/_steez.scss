@@ -89,7 +89,7 @@ main {
     margin: 0px 20px 20px 20px;
     .intro {
         position: relative;
-        height: 70vh;
+        height: 85vh;
         display: flex;
         &__side-one {
             background-color: #F3F3F3;
@@ -100,6 +100,7 @@ main {
                 position: relative;
                 z-index: 99;
                 padding: 20px;
+                transition: 2s margin ease-in;
                 h1 {
                     font-size: 8em;
                     font-weight: 600;
@@ -170,7 +171,7 @@ main {
         }
     }
 }
-section#portfolio{
+section#portfolio {
    position: relative;
    
    .portfolio-header {
@@ -190,6 +191,9 @@ section#portfolio{
    .portfolio {
         display: flex;
         justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        transition: 1s all ease-in-out;
         li:nth-child(1) {
             background-image: url('../oi.jpg');
         }
@@ -266,14 +270,19 @@ section#portfolio{
                 }
                 video {
                     position: absolute;
-                    width: 100vh;
+                    width: auto;
                     height: 100vh;
                 }
            }
        }
    }
 }
-
+section#portfolio.viewing {
+    .portfolio {
+        margin-top: 0;
+        max-width: 100%;
+    }
+}
 @-webkit-keyframes action {
     0% { transform: translateY(0); }
     100% { transform: translateY(-10px); }
