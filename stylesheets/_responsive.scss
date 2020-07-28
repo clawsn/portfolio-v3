@@ -109,9 +109,9 @@
                 .color-hex {
                     text-align: right;
                 }
-                .scroll__text {
-                    margin-bottom: 140px;
-                }
+                // .scroll__text {
+                //     margin-bottom: 140px;
+                // }
             }
         }
     }
@@ -119,8 +119,8 @@
         margin: 0px 20px 120px 20px;
         .portfolio {
             height: 380px;
-            max-width: 1100px;
-            margin-top: -160px;
+            // max-width: 1100px;
+            // margin-top: -160px;
             li:nth-child(1) {
                 &:hover a {
                     box-shadow: 20px 20px 30px rgba(34,34,34,.4);
