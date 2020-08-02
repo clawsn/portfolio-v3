@@ -85,6 +85,15 @@
             }
         }
     }
+    section#about {
+        .about {
+            flex-direction: column;
+            &__right {
+                align-items: center;
+                margin-top: 20px;
+            }
+        }
+    }
 }
 
 @media screen and (min-width:992px){
@@ -185,4 +194,16 @@
             }
         }
      }
+     section#about {
+        .about {
+            &__left {
+                width: 70%;
+            }
+            &__right {
+                width: 30%;
+                flex-direction: column;
+                margin-left: 20px;
+            }
+        }
+    }
 }
