@@ -88,6 +88,17 @@
     section#about {
         .about {
             flex-direction: column;
+            &__left {
+                &__text {
+                    padding: 20px;
+                    h1 {
+                        font-size: 2em;
+                    }
+                    p {
+                       font-size: 1.3em;
+                    }
+                }
+            }
             &__right {
                 align-items: center;
                 margin-top: 20px;
@@ -198,6 +209,16 @@
         .about {
             &__left {
                 width: 70%;
+                &__text {
+                    padding: 20px 10% 20px 20px;
+                    max-width: 800px;
+                    h1 {
+                        font-size: 2em;
+                    }
+                    p {
+                        font-size: 1.6em;
+                    }
+                }
             }
             &__right {
                 width: 30%;
