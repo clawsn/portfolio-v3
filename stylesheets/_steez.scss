@@ -51,11 +51,16 @@ header {
     nav {
         display: flex;
         overflow: hidden;
+        transition: .1ss background-color ease-in-out;
+        height: 50px;
         .nav-bar {
             display: flex;
             align-items: center;
             #logo { 
-                flex-grow: 1; 
+                flex-grow: 1;
+                margin: 0;
+                transition: .13s all ease-in;
+                position: relative;
                 div {
                     height: 50px;
                     width: 50px;
@@ -63,12 +68,25 @@ header {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    transition: .13s all ease-in;
                     h1 {
                         font-size: 1.2em;
                         color: #fff;
                         line-height: 1;
                         font-weight: 400;
                     }
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0; left: 0;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 10px 10px 0;
+                    border-color: transparent darken($primary-brand, 30%) transparent transparent;
+                    transition: .2s all ease-in-out;
+                    z-index: -9;
                 }
             }
             .nav {
@@ -82,7 +100,32 @@ header {
                     }
                 }
             }
+            
         }
+        .nav-bar.shrink {
+            background-color: white;
+            position: fixed;
+            top: 0; right: 0; left: 0;
+            z-index: 9999;
+            padding: 0 20px;
+            box-shadow: 20px 6px 16px rgba(34,34,34,.2);
+            #logo {
+                margin-left: -10px;
+                div {
+                    height: 75px;
+                    width: 75px;
+                }
+                &:before {
+                    top: 100%;
+                }
+            }
+        }
+    }
+    nav.shrink {
+        background-color: white;
+        position: fixed;
+        top: 0; right: 0; left: 0;
+        z-index: 9999;
     }
 }
 main {
@@ -299,11 +342,38 @@ section#about {
                 width: 100%;
                 h1 {
                     margin-bottom: 26px;
-                    color: #1c1b20;
+                    color: $primary-dark;
+                    border-left: 6px solid #5b37b7;
+                    padding-left: 20px;
                 }
                 p {
                     line-height: 1.4;
                     font-weight: 100;
+                }
+                ul {
+                    margin-top: 20px;
+                    li {
+                        display: inline-block;
+                        margin: 0 .2em;
+                        a {
+                            display: flex;
+                            background-color: $primary-dark;
+                            height: 36px;
+                            width: 36px;
+                            border-radius: 50%;
+                            align-items: center;
+                            justify-content: center;
+                            transition: .12s background-color ease-in-out;
+                            svg {
+                                max-width: 24px;
+                                height: auto;
+                                fill: #fff;
+                            }
+                            &:hover {
+                                background-color: $primary-brand;
+                            }
+                        }
+                    }
                 }
             }
         }
