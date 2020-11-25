@@ -95,14 +95,38 @@
                         font-size: 2em;
                     }
                     p {
-                       font-size: 1.3em;
+                       font-size: 1.5em;
                     }
                 }
             }
             &__right {
                 align-items: center;
                 margin-top: 20px;
+                &:after {
+                    content: '';
+                    width: 60px;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 100%;
+                    z-index: 999;
+                    // background: rgb(255,255,255);
+                    // background: linear-gradient(275deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0.604079131652661) 40%, rgba(255,255,255,0.4) 60%, rgba(255,255,255,0) 100%);
+                    background: rgb(255,255,255);
+                    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.604079131652661) 70%, rgba(255,255,255,0.8) 90%);
+                }
             }
+        }
+    }
+    section#contact {
+        .contact {
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1.5em;
+             }
         }
     }
 }
@@ -129,18 +153,18 @@
                 .color-hex {
                     text-align: right;
                 }
-                // .scroll__text {
-                //     margin-bottom: 140px;
-                // }
+                .scroll__text {
+                    margin-bottom: 140px;
+                }
             }
         }
     }
-    section#portfolio{
+    section#portfolio {
         margin: 0px 20px 120px 20px;
         .portfolio {
             height: 380px;
-            // max-width: 1100px;
-            // margin-top: -160px;
+            max-width: 1100px;
+            margin-top: -160px;
             li:nth-child(1) {
                 &:hover a {
                     box-shadow: 20px 20px 30px rgba(34,34,34,.4);
@@ -207,6 +231,7 @@
      }
      section#about {
         .about {
+            height: 100vh;
             &__left {
                 width: 70%;
                 &__text {
@@ -229,9 +254,17 @@
     }
     section#contact {
         .contact {
+            text-align: center;
+            h1 {
+                font-size: 6em;
+            }
+            p {
+                font-size: 1.6em;
+            }
             .btn.btn-primary {
                 max-width:  200px;
             }
         }
     }
+
 }
