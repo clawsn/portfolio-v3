@@ -7,15 +7,23 @@
     <link rel="stylesheet" href="stylesheets/app.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
+    <meta name="robots" content="index" />
+    
 </head>
-<body id="my-scrollbar">
+<body id="top">
+<div id="loader">
+    <div class="spinner">
+        <div class="cube1"></div>
+        <div class="cube2"></div>
+    </div>
+</div>
 <header>
     <nav>
         <div class="container-lg">
             <div class="nav-bar">
-                <div id="logo">
+                <a href="#top" id="logo">
                     <div><h1>KC</h1></div>
-                </div>
+                </a>
                 <ul class="nav">
                     <li class="nav__item">
                         <a href="#portfolio">
@@ -24,7 +32,12 @@
                     </li>
                     <li class="nav__item">
                         <a href="#about">
-                            About me
+                            About
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact">
+                            Contact
                         </a>
                     </li>
                 </ul>
@@ -314,10 +327,10 @@
         <div class="contact">
             <h1>Get in touch</h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Distinctio ex pariatur corrupti odio! Quam, et!
+                Have questions, or just want <br /> to <a href="mailto:kyleclaw@gmail.com" target="_blank" >say hello</a>, get in touch and contact me.
             </p>
-            <a href="#0" class="btn btn-primary">
-                View my work
+            <a href="mailto:kyleclaw@gmail.com" target="_blank" class="btn btn-primary">
+                Send Message
             </a>
         </div>
     </div>
